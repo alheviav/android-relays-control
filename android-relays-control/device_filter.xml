@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Filtro para conversores USB-Serial genéricos -->
+    <!-- Incluye FTDI, CH340, CP2102, PL2303, etc. -->
+    
+    <!-- FTDI (muy común en conversores RS485) -->
+    <usb-device vendor-id="1027" />  <!-- 0x0403 -->
+    
+    <!-- CH340/CH341 (muy común y económico) -->
+    <usb-device vendor-id="6790" />  <!-- 0x1a86 -->
+    
+    <!-- Silicon Labs CP210x -->
+    <usb-device vendor-id="4292" />  <!-- 0x10c4 -->
+    
+    <!-- Prolific PL2303 -->
+    <usb-device vendor-id="1659" />  <!-- 0x067b -->
+    
+    <!-- Arduino (por si acaso) -->
+    <usb-device vendor-id="9025" />  <!-- 0x2341 -->
+    
+    <!-- Permite cualquier dispositivo USB-Serial genérico -->
+    <!-- Descomenta la siguiente línea si tu conversor no está en la lista -->
+    <!-- <usb-device class="255" /> -->
+</resources>

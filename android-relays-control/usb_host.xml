@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- Permisos USB -->
+    <uses-permission android:name="android.permission.USB_PERMISSION" />
+    
+    <!-- Característica de hardware USB Host -->
+    <uses-feature android:name="android.hardware.usb.host" android:required="true" />
+    
+    <application>
+        <!-- Intent filter para detectar conexión USB -->
+        <activity android:name="org.kivy.android.PythonActivity">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+            
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
+        </activity>
+    </application>
+</manifest>
